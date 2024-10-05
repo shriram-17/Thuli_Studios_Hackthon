@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # Retrieve Groq API Key
-api_key = os.getenv("GROQ_TOKEN")  # Ensure the environment variable name matches
+api_key = os.getenv("groq_token")  # Ensure the environment variable name matches
 if not api_key:
     raise ValueError("Groq API token not found in environment variables.")
 
