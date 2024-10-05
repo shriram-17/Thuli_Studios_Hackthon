@@ -158,9 +158,9 @@ def main():
                 print(f"{key}: {value}")
             
             # Save data to CSV files
-            repo_data['commits'].to_csv(f"{repo_name}_commits.csv", index=False)
-            repo_data['pull_requests'].to_csv(f"{repo_name}_pull_requests.csv", index=False)
-            repo_data['issues'].to_csv(f"{repo_name}_issues.csv", index=False)
+            repo_data['commits'].to_csv(f"./data/{repo_name}_commits.csv", index=False)
+            repo_data['pull_requests'].to_csv(f"./data/{repo_name}_pull_requests.csv", index=False)
+            repo_data['issues'].to_csv(f"./data/{repo_name}_issues.csv", index=False)
             
             print(f"\nData saved to CSV files: {repo_name}_commits.csv, {repo_name}_pull_requests.csv, {repo_name}_issues.csv")
         else:

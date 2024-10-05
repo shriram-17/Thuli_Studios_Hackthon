@@ -213,7 +213,7 @@ def commits_page():
             st.subheader("Commit Data")
             st.dataframe(data['commits'])
             os.makedirs('data', exist_ok=True)
-            data['commits'].to_csv('data/commits.csv', index=False)
+            data['commits'].to_csv('./src/data/commits.csv', index=False)
 
             st.subheader("Commit Visualizations")
             display_commit_visualizations(data['commits'])
@@ -229,7 +229,7 @@ def pull_requests_page():
             st.subheader("Pull Request Data")
             st.dataframe(data['pull_requests'])
             os.makedirs('data', exist_ok=True)
-            data['pull_requests'].to_csv('data/pull_requests.csv', index=False)
+            data['pull_requests'].to_csv('./src/data/pull_requests.csv', index=False)
 
             st.subheader("Pull Request Visualizations")
             display_pull_request_visualizations(data['pull_requests'])
