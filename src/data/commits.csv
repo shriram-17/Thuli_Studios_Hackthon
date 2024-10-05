@@ -1,0 +1,150 @@
+sha,author,date,message
+41c5ad8214f638102b1db3b24ca43b05e0d521a3,en3rypt,2024-01-19 07:08:37+00:00,public
+2c470aafdb7021014aec47d5e34d58f62ffb02a8,en3rypt,2024-01-19 06:59:17+00:00,path
+80f514c363080708a9b78ec0e1f3509288a58cfe,en3rypt,2024-01-19 06:46:34+00:00,build
+e9105a9f1c958abb08cb1a0d1620de7560688d82,en3rypt,2024-01-19 05:07:59+00:00,vercel deployment config
+24bbf1b3511b2bf1e3d5568bc95cdadbf3255a25,jassuwu,2022-10-26 12:10:26+00:00,fix: highest wpm index capping some profiles
+16eb50bdf25e3e918c45d833ec75931ab9384ca8,jassuwu,2022-10-19 01:23:13+00:00,Update README.md
+33faeadf913b683e123ca7486eb8f210b76b53bd,jassuwu,2022-10-19 01:21:51+00:00,"Merge pull request #18 from en3rypt/shriram
+
+updated README.md"
+9204fb4ae21ed4398e3fe73a6e39bf3508f2804f,jassuwu,2022-10-19 01:20:35+00:00,updated README.md
+6aa6d1233f679d4a279c205717a4a72baad9226d,jassuwu,2022-10-19 00:57:01+00:00,"Merge pull request #17 from en3rypt/shriram
+
+Master <= Shriram : leaderboard + repeat games"
+0bcb4f242ad43005dc7808ba8f0642f44b382c24,jassuwu,2022-10-19 00:55:55+00:00,update only extra gamescore
+ee0ff7e1b13f6e07ab822e7bd9d6166e55aed4aa,jassuwu,2022-10-19 00:51:28+00:00,updateGame on better score
+9965ec90fcc53c11152e23ffcd8ec5f3a1a35235,jassuwu,2022-10-19 00:26:28+00:00,fix leaderboard frontend + add to navbar
+37df518dbd829f2fb4095a6e9d5d6bc48552e0b8,jassuwu,2022-10-13 09:49:47+00:00,shriram changes
+b77f4b1955c543f51d8fa5d17d54d5056fa0ffd9,shriram-17,2022-10-13 07:50:25+00:00,Delete
+962e03979496141daebfb3075b045b99388d4969,shriram-17,2022-10-13 07:44:21+00:00,did some changes
+9f3b58ab07ede842ffd5b5186f728772e3797107,jassuwu,2022-10-13 02:21:34+00:00,update signup email type
+ed0dabde5e59cd5936a5cd1e4ba74c53e3901630,jassuwu,2022-10-13 02:17:10+00:00,rank for new accounts fix
+fc1cef110bbd3b2c88af6c3bc68c89e4191c8f4c,jassuwu,2022-10-13 02:13:56+00:00,profile page
+25ea834760ee858ade9a8bc1d23d93ca192b91b5,jassuwu,2022-10-12 18:13:59+00:00,add gamesdb and embed the profile page with values
+e63e5cb57ab0a7d3d14d5269d676de83177fd589,jassuwu,2022-10-12 18:03:23+00:00,post game data to typiodb
+c22d44f84b7f5b417b68aaba78b61c750158dee2,en3rypt,2022-10-12 17:46:50+00:00,logout functionality implemented
+b5a47b5667def9aa2fd67dede22773586ba8718d,jassuwu,2022-10-12 17:41:21+00:00,pre logout route
+9d6e11a111bb9411000caeff77e19581f59febf1,jassuwu,2022-10-12 17:39:53+00:00,pre logout route
+f9395ecc372a70a23164c415f294e3e056ed1542,en3rypt,2022-10-12 15:16:21+00:00,user authenthication completed
+615a0c0e7814ab407c3b3a0f782af5500b1c0761,jassuwu,2022-10-11 19:42:11+00:00,complete login and signup db conn
+6a936e882ef138108db8e9b537001be94e3a3ff9,en3rypt,2022-10-11 18:50:52+00:00,"login,signup, practice stats"
+3eb1b1a3f3db3dcc51326891a8b56450eb174714,jassuwu,2022-10-11 18:44:33+00:00,added quote and quoteid to practice
+c379c6de9449d8303b9db6aad3035175948da2f8,jassuwu,2022-10-11 18:30:47+00:00,change quote and write queries for other db
+cc162293947a1e4094583459cf06127c33cc7eb9,jassuwu,2022-10-11 16:42:51+00:00,change about page
+0de03d0b686c38314aa2e25c2f821e513dd54a10,jassuwu,2022-10-11 16:36:35+00:00,add profile ejs
+6ec317e591868d85bd6430004b43da38574ffd26,jassuwu,2022-10-11 14:25:56+00:00,get quote from db
+e6b331d73d08397b3e9a9fbe0145f4f37c9e49c3,jassuwu,2022-10-11 10:06:59+00:00,added quotes to quotesdb
+b84d52ceb98fd49ca5abee7d21ed47602267ed97,jassuwu,2022-10-11 09:30:04+00:00,add env to index after refactoring
+fb602cc702443ea5831fce553733a920dfe25692,jassuwu,2022-10-11 09:26:36+00:00,code refactoring before full db addition
+b9ae2e56b8ab2801b98594b4a106585d1919a6e2,jassuwu,2022-10-11 08:22:36+00:00,fauna addition
+8f3ff4f44fb61ebf80cfe22fd04404feb28f607f,jassuwu,2022-06-09 08:59:09+00:00,"Merge pull request #16 from en3rypt/jass
+
+fix first position change bug"
+1d3e14094da18585c054140ae4056b6759cd2d09,jassuwu,2022-06-09 08:58:25+00:00,fix first position change bug
+295d18e6f753bf4dcc2f040e38b981470205c758,en3rypt,2022-06-09 07:24:25+00:00,"Merge pull request #15 from en3rypt/3ncrypt
+
+3ncrypt"
+5d82a8d159b85af17ab0cca4cf358a50f64ddf39,en3rypt,2022-06-09 07:22:30+00:00,results update
+5c7e6fe5cf45afd7eb5b2b3c80139a2e0be3e113,en3rypt,2022-06-09 06:56:48+00:00,stats update
+1f15425927d8127dc2282ea33f81603765c82464,jassuwu,2022-06-09 05:41:08+00:00,update about Us with content
+80045fa8bd33096ea64f7f39ba8ad22cbd1f4924,en3rypt,2022-06-09 02:06:21+00:00,404 page added
+bb18f50fba94149afd07b0dd93b5ae440333c0db,jassuwu,2022-06-09 01:50:03+00:00,"master <=  jass 
+
+rework racetrack ui"
+b99743d29e95c934c8113580a4f265b946fda1ad,jassuwu,2022-06-09 01:48:40+00:00,Merge branch 'master' into jass
+e015e1d724a310ff60db5e1cd9b3131256edf401,jassuwu,2022-06-09 01:44:29+00:00,rework racetrack ui
+751739289c247ea69f4530460a28e7301579efe7,en3rypt,2022-06-09 01:44:20+00:00,timmings update
+23e4502c3b44d0170795b27eec77a4236e442166,en3rypt,2022-06-09 01:43:19+00:00,new game round about method ;-;
+1f4d84cbe142499857e420dc5220216908c2e348,en3rypt,2022-06-08 19:00:21+00:00,"Merge pull request #13 from en3rypt/jass
+
+Jass"
+1021c321f1684ddb9111521519435e2276f60464,en3rypt,2022-06-08 19:00:02+00:00,padding update
+474d9fcce14ac07cebf1dd24aa77ed8bbd942108,jassuwu,2022-06-08 18:43:22+00:00,"add login, signup pages to express"
+35dcf06f2422fabd05edbe7e5bb8d56675021b27,en3rypt,2022-06-08 18:01:27+00:00,"wpm update,all complete match update"
+8fd7a5bc149d4eb9753ed036440d7ca268aced21,en3rypt,2022-06-08 15:56:23+00:00,"Merge pull request #12 from en3rypt/dup
+
+Dup"
+36a815745efd8e3fbda8d0a18fba1beb767f113e,en3rypt,2022-06-08 15:56:16+00:00,Merge branch 'master' into dup
+f4b92a0a6c23ccf6974bb954b8afabef84b6cb71,en3rypt,2022-06-08 15:54:33+00:00,create page update
+b56d1aca3759b583d5e3c6b82db72bb4b435d418,en3rypt,2022-06-08 15:36:50+00:00,"Merge pull request #11 from en3rypt/jass2
+
+Jass2"
+77efcc84232ad4f24719c6d3094224ccc6f16b90,en3rypt,2022-06-08 15:14:00+00:00,user join inbetwen update
+7a1e1e18debf648c8e71e58d561a992249a5ddc6,jassuwu,2022-06-08 15:10:08+00:00,change ejs
+0013b922aed532f00ef83af57ac759d8ebbb78d6,jassuwu,2022-06-08 15:09:36+00:00,change create.ejs
+f59751ca3afd690c49c42091cac14fcfc5458347,en3rypt,2022-06-08 14:31:27+00:00,merge conflicts update
+fc57501973175abb25204963e9aef99966477a75,en3rypt,2022-06-08 14:11:58+00:00,"Merge pull request #10 from en3rypt/dup
+
+Dup"
+35b6b457fab613b58c6408b466b38bf60161f7a0,en3rypt,2022-06-08 14:09:49+00:00,"Merge pull request #9 from en3rypt/3ncrypt
+
+3ncrypt"
+181407220ad1e2233b634e11356e7fafb2836553,en3rypt,2022-06-08 14:09:43+00:00,Merge branch 'dup' into 3ncrypt
+755bf70a2524e703eeeb3698ac587c12400bbd39,en3rypt,2022-06-08 14:00:47+00:00,"match timer,countdown, name update"
+ff5c64186d89eeb1e22b49d1e7c51e15f692ce8b,jassuwu,2022-06-08 11:34:31+00:00,update to countdown
+fd5a8e2b7cf54ff26946d5e2f1e7db7bc21a3144,en3rypt,2022-06-08 11:13:16+00:00,update player name indication
+a17e756fd066476802930fe48e19220723322064,jassuwu,2022-06-08 11:06:53+00:00,add countdown on the racetrack
+977e586894824f04aad86b6843d83b0682efbc41,en3rypt,2022-06-08 10:35:24+00:00,position update
+53c4eb88fad30fe066d95cafa8e428f168c1fbce,jassuwu,2022-06-08 09:59:02+00:00,Merge branch 'jass' of https://github.com/en3rypt/type-racer into jass
+d5be35885350cd419a11ee902a866e0db64a217e,en3rypt,2022-06-08 09:56:34+00:00,some update
+b9d4022b8f34042661f9c7f3fa8c08b6339ebb66,en3rypt,2022-06-08 09:29:52+00:00,progress bar constant if new user join during game
+2b06e549d809db2cab72407eb9824bcc25747e5e,en3rypt,2022-06-08 04:35:20+00:00,progess id update
+8da9633bebfca38dbd779e342dacdf98ff27882e,en3rypt,2022-06-08 04:24:41+00:00,update
+4b91e00d5f515e11b0e0e09d53354e89703b6c5b,jassuwu,2022-06-08 04:17:00+00:00,start timer change
+3c8f20cc8e56abfb360e982dc5cef6b889f1125f,jassuwu,2022-06-08 03:00:44+00:00,"master <=  jass 
+
+add completion and time-up acknowldgement"
+e83b0fdd5cb19d69087d697ae4cb8724cea8cdd0,jassuwu,2022-06-08 02:00:08+00:00,add completion and time-up acknowldgement
+9f345f1687c091bfff2218852ab46c8d26db2b60,en3rypt,2022-06-07 15:58:01+00:00,Merge branch 'master'
+b2eb9728525dcfbf62be7e7e409905954eab443a,en3rypt,2022-06-07 15:52:56+00:00,progressBroadcast update
+f14e7861dac6fa9f897e75b2fe9c0ea5cdef7573,jassuwu,2022-06-07 15:12:04+00:00,"master <=  jass : add restart btn to races
+
+add restart typing btn for races"
+bbfa05d2a542498606e0734947dd6e72ea281ea7,jassuwu,2022-06-07 15:10:52+00:00,add restart typing btn for races
+0201839f4721d20ef35969496a8e3025e6194c55,jassuwu,2022-06-07 14:51:58+00:00,add RealTime progress
+e6a9399a3f23752674ff569a0cf6a17153aad1b7,en3rypt,2022-06-07 11:21:32+00:00,room creation and operations
+149d585251feffd14a22f3a959751cf6734ee772,jassuwu,2022-06-06 16:05:15+00:00,"Merge pull request #5 from en3rypt/jass
+
+jass <= master"
+b0ce92bc1acc6a9396b056aa988aec9c9d16754c,jassuwu,2022-06-06 16:00:40+00:00,"jass <= master
+
+jass <= master"
+28227ef89f4eba11213ee15200a72ee0a3a680ca,en3rypt,2022-06-06 15:53:49+00:00,rooms try
+e960822c9f6de3ad0593d0a1e706e2cb48ffb29a,en3rypt,2022-06-06 12:16:51+00:00,"Merge pull request #3 from en3rypt/en3rypt
+
+En3rypt"
+a2e6b50440bbd77752dcc602797306bc5d768465,en3rypt,2022-06-06 12:06:58+00:00,race update
+3a8740ee1927be392a5c2998189225d635fdd5bc,en3rypt,2022-06-06 11:53:09+00:00,socket io progress
+87f2dff83ea84927732859e3a7a4b763051d2405,en3rypt,2022-06-06 10:25:30+00:00,"div height, progress bar fix"
+4878150a114956c6c9666794c826fa34532ab87c,jassuwu,2022-06-06 09:18:12+00:00,"master <= jass : add progress-bar to practice
+
+master <= jass : add progress-bar to practice"
+20269545463a594db654c64ef29f418deb13852d,jassuwu,2022-06-06 09:17:00+00:00,fix logo redirect
+95c9b57f2e664b3e8be9c4ae6b397c4e1817a7ab,jassuwu,2022-06-06 09:16:43+00:00,fix logo redirect
+f79e9f720ae299a1ed69fa038fc698fec422c090,jassuwu,2022-06-06 09:14:47+00:00,add progress bar
+cb11ff98587a93fdaa8304239058ed837d382ffd,en3rypt,2022-06-05 19:02:38+00:00,yarn update
+61eb1e10b57e502e764c0b64b5c7027f1823eadf,jassuwu,2022-06-05 16:02:01+00:00,"master <=  jass : merge random para generation
+
+master <=  jass : merge random para generation"
+94f95fcde8538a265097c8fb07102179b5f4159d,jassuwu,2022-06-05 15:49:57+00:00,added href to START btn
+427398c85df10d1ece8a5337ae114af29691eb16,jassuwu,2022-06-05 15:47:01+00:00,complete random para in Practice page
+7af458dcd43a342a5e99567f040156dcb1f81a27,en3rypt,2022-06-05 11:26:59+00:00,Create README.md
+d35720255181be6543c554263b3740524595a37b,en3rypt,2022-06-05 11:01:49+00:00,package update
+c3900f0cc1476330bc77a1b4819468ca190f8894,en3rypt,2022-06-05 10:59:04+00:00,heroku update
+315d72cb22334320dcbe2aed999ba4bb5c976f2f,en3rypt,2022-06-05 10:42:50+00:00,express server update
+3a576187409e53f7895786fa53b14ed16d3ba0c6,jassuwu,2022-06-05 06:27:09+00:00,aboutUs.html : make avatars dynamic
+2821a59004231d1d0745101d6e86a7256850928b,en3rypt,2022-06-05 04:39:43+00:00,practice game
+b4a7acd415edcad2e0cee68dd052b0a38fb472a8,en3rypt,2022-06-04 19:58:02+00:00,image try
+1b5a80979e46871a5a2d345dbb9a301588feb28b,en3rypt,2022-06-04 15:46:37+00:00,navbar update
+35ebac4680535c37c2a419b85deca7f0be109c35,en3rypt,2022-06-04 15:45:31+00:00,racer page
+d226151c699a1b82c3c6c8147a0f164c55871667,jassuwu,2022-06-04 13:32:16+00:00,fix href
+6968f13a8a280931724965b3e0c1554e925fc00f,jassuwu,2022-06-04 13:30:05+00:00,add avatars and href changes
+ffde0f2acda3ed07a2fb502296ed24e71f575270,en3rypt,2022-06-04 13:16:18+00:00,about su update
+7e08418f5bab8859aebcb19bc235bfe779b13cd8,en3rypt,2022-06-04 13:05:12+00:00,about us
+78bf137928cad2aeb638faf13727764ce072faaa,jassuwu,2022-06-04 12:04:47+00:00,fix fontsizing and position
+94a5c9f3c5d76ee116c830a96f426daf07fae841,en3rypt,2022-06-04 11:29:29+00:00,home page update
+a2cf396926bcad7b2c33c682e8472a04cd623e7d,en3rypt,2022-06-04 10:12:20+00:00,keyboard update
+6035eb8e09f731a4ba5a456f1692319f780a9826,en3rypt,2022-06-04 09:34:41+00:00,ui updates
+70ae568277165f0684e6f5ead6bdde38232b9de2,en3rypt,2022-06-04 08:42:28+00:00,f
+294b6aa8aa5f5fdfb6ad88316eb794c461602e1a,en3rypt,2022-06-04 08:39:14+00:00,first commit

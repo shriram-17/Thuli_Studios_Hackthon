@@ -4,7 +4,6 @@ import pandas as pd
 import re
 from dotenv import load_dotenv
 import concurrent.futures
-from datetime import datetime
 
 # Load environment variables from .env file
 load_dotenv()

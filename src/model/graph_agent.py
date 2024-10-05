@@ -66,19 +66,22 @@ def query_groq(user_query: str, data: pd.DataFrame, entity_counts: Counter) -> s
     grouped_commits = data.groupby('author')['message'].apply(lambda x: ' | '.join(x)).reset_index()
     data_summary = grouped_commits.to_string(index=False)
     
+    # Create a summary of column names and their data types
+    columns_info = {col: str(data[col].dtype) for col in data.columns}
+    
     # Prepare the prompt for Groq API
     prompt = f"""
     Given the following sample of GitHub commit data (first few rows) from the file 'data/commits.csv':\n
     {data_summary}\n
     Additional context:
-    - Entities (technologies, organizations, locations) mentioned in commit messages and their frequencies: {dict(entity_counts)}
-    
+    - The file has the following columns and their data types: {columns_info}
     Please answer the following query and provide Python code using only Plotly to generate interactive visualizations based on the commit data.
     Ensure the code adheres to these guidelines:
     1. The code should be complete and executable as is.
     2. Use only Plotly for visualizations.
-    3. Only Give Me Code Here No Output or any Explanation
-    4. Path of the CSV File is "./src/data/commits.csv" 
+    3. Only Give Me Code Here.
+    4. No Explanation, No Heading, No Subheading
+    5. Path of the CSV file is './src/data/commits.csv'
     Here is the query: {user_query}
     """
     
@@ -102,6 +105,7 @@ def query_groq(user_query: str, data: pd.DataFrame, entity_counts: Counter) -> s
             'entity_counts': entity_counts
         }
         
+        print(cleaned_code)
         # Execute the cleaned code in the local context
         exec(cleaned_code, local_context)
         
@@ -112,6 +116,7 @@ def query_groq(user_query: str, data: pd.DataFrame, entity_counts: Counter) -> s
     except Exception as e:
         logging.error(f"An error occurred: {str(e)}")
         return f"An error occurred: {str(e)}"
+
 
 def image_groq(user_query):
     # Load and preprocess data outside of Streamlit context for testing or other use cases.
