@@ -1,34 +1,3 @@
-Here’s the updated README file with detailed explanations of the functions in `graph_agent.py`. You can copy this directly into your `README.md`:
-
-```markdown
-# GitHub Repository Data Collector
-
-This repository contains a collection of Python scripts that interact with the GitHub API to extract repository data, analyze commits, pull requests, issues, and visualize data using Plotly. The project also integrates a Qdrant database for storing graph syntax templates and utilizing embeddings for query handling.
-
-## Table of Contents
-
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Files Description](#files-description)
-    - [github_collection.py](#github_collectionpy)
-    - [text_agent.py](#text_agentpy)
-    - [graph_agent.py](#graph_agentpy)
-    - [qdrant.py](#qdrantpy)
-- [License](#license)
-
-## Project Structure
-
-```
-.
-├── data                   # Directory for storing CSV files
-├── .env                   # Environment variables
-├── github_collection.py    # Script for collecting GitHub repository data
-├── text_agent.py           # Agent for handling text-based queries
-├── graph_agent.py          # Agent for generating visualizations
-├── qdrant.py               # Qdrant integration and query handling
-└── README.md               # Project documentation
-```
 
 ## Installation
 
@@ -78,21 +47,11 @@ This agent is responsible for processing text-based queries and extracting relev
 
 ### `graph_agent.py`
 This agent generates visualizations based on provided data and user queries. It integrates with Plotly for creating dynamic visualizations. Key functions include:
-
-#### `load_data()`
-Loads and preprocesses commit data from a CSV file, converting date strings into datetime objects and calculating message lengths.
-
-#### `extract_entities(text)`
-Uses spaCy to extract named entities from a given text, focusing on organizations, products, geographical entities, and locations.
-
-#### `preprocess_commits(df)`
-Processes commit messages to extract key information using Named Entity Recognition (NER). It counts occurrences of each entity and extracts file changes if available.
-
-#### `query_groq(user_query: str, data: pd.DataFrame, entity_counts: Counter, graph_type: str, graph_syntax: str) -> str`
-Queries the Groq API with a user query and provided commit data. It prepares a prompt with context about the commit data and requested visualization type, sends it to Groq API, cleans up the generated code, executes it in a local context, and returns any generated images.
-
-#### `image_groq(user_query)`
-Main function that orchestrates loading commit data, preprocessing it, querying for graph types using Qdrant, and generating visualizations based on user queries.
+- `load_data()` : Loads and preprocesses commit data from a CSV file, converting date strings into datetime objects and calculating message lengths.
+- `extract_entities(text)`: Uses spaCy to extract named entities from a given text, focusing on organizations, products, geographical entities, and locations.
+- `preprocess_commits(df)` Processes commit messages to extract key information using Named Entity Recognition (NER). It counts occurrences of each entity and extracts file changes if available.
+- `query_groq(user_query: str, data: pd.DataFrame, entity_counts: Counter, graph_type: str, graph_syntax: str) -> str` Queries the Groq API with a user query and provided commit data. It prepares a prompt with       context about the commit data and requested visualization type, sends it to the Groq API, cleans up the generated code, executes it in a local context, and returns any generated images.
+- `image_groq(user_query)` : Main function that orchestrates loading commit data, preprocessing it, querying for graph types using Qdrant, and generating visualizations based on user queries.
 
 ### `qdrant.py`
 This script integrates with Qdrant to manage graph types and their corresponding syntax for visualizations. Key functionalities include:
@@ -105,8 +64,3 @@ This script integrates with Qdrant to manage graph types and their corresponding
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
-```
-
-### Key Points:
-- Ensure that you customize any placeholder URLs or tokens in sections like Installation.
-- Feel free to adjust descriptions or function explanations as needed to better fit your project's specifics or style preferences. Let me know if you need any further changes!
