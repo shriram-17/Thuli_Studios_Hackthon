@@ -291,7 +291,7 @@ app = workflow.compile()
 # Function definitions remain the same
 def classify(user_query: str) -> str:
     """Simple classification logic for demonstration."""
-    visualization_keywords = ['show', 'plot', 'graph', 'visualize', 'chart', 'display','histogram','linechart']
+    visualization_keywords = ['show', 'plot', 'graph', 'visualize', 'chart', 'display','histogram','linechart','wordcloud']
     if any(keyword in user_query.lower() for keyword in visualization_keywords):
         return "graph"
     return "text"

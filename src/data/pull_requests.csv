@@ -1,19 +1,6 @@
 number,title,author,created_at,closed_at,state,review_comments,additions,deletions,review_cycle_time
-18,updated README.md,jassuwu,2022-10-19 01:21:46+00:00,2022-10-19 01:21:52+00:00,closed,0,49,22,0
-17,Master <= Shriram : leaderboard + repeat games,jassuwu,2022-10-19 00:56:46+00:00,2022-10-19 00:57:02+00:00,closed,0,67333,67220,0
-16,fix first position change bug,jassuwu,2022-06-09 08:58:51+00:00,2022-06-09 08:59:09+00:00,closed,0,17,24,0
-15,3ncrypt,en3rypt,2022-06-09 07:24:07+00:00,2022-06-09 07:24:25+00:00,closed,0,48,4,0
-14,rework racetrack ui,jassuwu,2022-06-09 01:47:30+00:00,2022-06-09 01:50:04+00:00,closed,0,33,17,0
-13,Jass,en3rypt,2022-06-08 19:00:14+00:00,2022-06-08 19:00:21+00:00,closed,0,218,3,0
-12,Dup,en3rypt,2022-06-08 15:55:08+00:00,2022-06-08 15:56:24+00:00,closed,0,111,13,0
-11,Jass2,en3rypt,2022-06-08 15:36:44+00:00,2022-06-08 15:36:50+00:00,closed,0,93,3,0
-10,Dup,en3rypt,2022-06-08 14:10:39+00:00,2022-06-08 14:11:58+00:00,closed,0,196,69,0
-9,3ncrypt,en3rypt,2022-06-08 14:01:58+00:00,2022-06-08 14:09:50+00:00,closed,0,42,23,0
-8,add completion and time-up acknowldgement,jassuwu,2022-06-08 03:00:25+00:00,2022-06-08 03:00:44+00:00,closed,0,28,1,0
-7,add restart typing btn for races,jassuwu,2022-06-07 15:11:12+00:00,2022-06-07 15:12:04+00:00,closed,0,8,3,0
-6,from master,en3rypt,2022-06-07 13:44:26+00:00,2022-06-07 13:44:34+00:00,closed,0,549,167,0
-5,jass <= master,jassuwu,2022-06-06 16:04:57+00:00,2022-06-06 16:05:15+00:00,closed,0,0,0,0
-4,jass <= master,jassuwu,2022-06-06 15:59:58+00:00,2022-06-06 16:00:41+00:00,closed,0,647,4179,0
-3,En3rypt,en3rypt,2022-06-06 12:16:44+00:00,2022-06-06 12:16:51+00:00,closed,0,524,80,0
-2,master <= jass : add progress-bar to practice,jassuwu,2022-06-06 09:17:57+00:00,2022-06-06 09:18:12+00:00,closed,0,18,2,0
-1,master <=  jass : merge random para generation,jassuwu,2022-06-05 16:01:44+00:00,2022-06-05 16:02:01+00:00,closed,0,17370,35,0
+8,exec copilot init,takahiro-ishitsuka-biz,2023-03-30 15:05:01+00:00,2023-03-30 15:05:35+00:00,closed,0,78,0,0
+6,fix(example-app): fix 404 on example-app path,dannyrandall,2022-08-16 20:16:46+00:00,2022-08-26 17:27:25+00:00,closed,0,1,0,9
+4,Update copilot init command in Readme,yysu,2021-04-30 16:34:23+00:00,2021-04-30 20:16:22+00:00,closed,0,4,4,0
+3,chore: change the base image to main nginx,iamhopaul123,2021-03-12 19:39:08+00:00,2021-03-12 19:40:16+00:00,closed,0,1,1,0
+2,fix: docker-hub-download-limits,neilkuan,2021-02-08 03:15:24+00:00,2021-02-17 19:28:36+00:00,closed,0,1,1,9
