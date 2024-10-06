@@ -37,6 +37,7 @@ A comprehensive GitHub repository analysis tool developed for the Thuli Studios 
    ```plaintext
    GITHUB_TOKEN=your_github_token
    qdrant_api=your_qdrant_api_key
+   groq_token = your_groq_token
    ```
 
 ## 🖥 Usage
