@@ -6,6 +6,11 @@
 
 A comprehensive GitHub repository analysis tool developed for the Thuli Studios Hackathon. This application provides insightful visualizations and metrics for repository data, including commits, pull requests, and developer activities.
 
+## 🔗 Quick Links
+
+- **Deployment**: [View the live application](https://thuli-studios-hackthon.streamlit.app/)
+- **Design Document**: [Read the project design](https://docs.google.com/document/d/18JpnlCxH-T5IgXeH-wAuBwgvLjWOKD9Tr2lm9hEV6Kw/edit?usp=sharing)
+
 ## 🚀 Features
 
 - GitHub repository data collection
@@ -57,7 +62,6 @@ The main application interface built with Streamlit. Key components include:
 - `pull_requests_page()`: Shows pull request data and visualizations with CSV export option.
 - `nlp_module_page()`: Processes user queries about commit data using graph and text agents.
 - `display_metrics()`: Renders key repository metrics in a card layout.
-- `display_commit_visualizations()` and `display_pull_request_visualizations()`: Generate specific visualizations for commits and pull requests.
 - `developer_page()`: Displays metrics and visualizations for developer activity.
 - `classify(user_query: str)`: Determines if a user query requires a graph or text response.
 
@@ -97,18 +101,23 @@ Manages graph types and their syntax for visualizations using Qdrant. Key functi
 - `get_plotly_graph_syntax()`: Provides syntax templates for various Plotly graph types.
 - `query_graph_type(client, model, collection_name, user_description)`: Queries Qdrant to find the best matching graph type based on user descriptions.
 
-## 📊 Visualizations
+### `commits_visualizations.py`
+Handles the creation of visualizations specific to commit data. Key functions include:
 
-### Commit Visualizations
-- **Commit Timeline**: Tracks commit frequency over time.
-- **Commit Frequency**: Shows commit patterns by hour, week, and month.
-- **Commit Message Word Cloud**: Visualizes common terms in commit messages.
+- `preprocess_dataframe(df)`: Preprocesses the commit DataFrame for visualization.
+- `plot_commit_timeline(df)`: Creates a timeline visualization of commits over time.
+- `plot_commit_frequency(df)`: Generates bar plots showing commit frequency by hour, day of week, and month.
+- `plot_commit_message_wordcloud(df)`: Creates a word cloud visualization of commit messages.
+- `plot_commit_heatmap(df)`: Generates a heatmap showing commit activity patterns.
 
-### Pull Request Visualizations
-- **Additions and Deletions**: Bar plot comparing code added vs. removed.
-- **Review Cycle Time**: Scatter plot showing PR review durations.
-- **PR State Distribution**: Pie chart of open, closed, and merged PRs.
-- **PR Complexity**: Bubble chart representing PR size and complexity.
+### `pr_visualizations.py`
+Manages visualizations related to pull request data. Main functions:
+
+- `preprocess_dataframe(df)`: Preprocesses the pull request DataFrame for visualization.
+- `plot_additions_deletions(df)`: Creates a bar plot comparing code additions and deletions in pull requests.
+- `plot_review_cycle_time(df)`: Generates a scatter plot showing review cycle times for pull requests.
+- `plot_pr_state_distribution(df)`: Creates a pie chart showing the distribution of pull request states.
+- `plot_pr_bubble_chart(df)`: Produces a bubble chart representing pull request complexity and size.
 
 ## 🧠 NLP Module
 
