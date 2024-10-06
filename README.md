@@ -30,7 +30,38 @@
 3. Use the `qdrant.py` file to handle queries related to graph types and their syntax.
 
 ## Files Description
+### `app.py`
+This file serves as the main application interface with several key functions:
 
+#### Main Function (main)
+Controls the main workflow of the application, including sidebar navigation and page rendering.
+
+#### Home Page Function (home_page)
+Allows users to enter a GitHub repository URL to fetch data. It parses the repository URL and collects relevant metrics to display.
+
+#### Commits Page Function (commits_page)
+Displays commit data along with visualizations. Provides users with an option to export this commit data to a CSV file for offline use.
+
+#### Pull Requests Page Function (pull_requests_page)
+Displays pull request data along with visualizations. Offers an option to export pull request data to a CSV file.
+
+#### NLP Module Page Function (nlp_module_page)
+Allows users to input queries about commit data. Utilizes both graph and text agents to generate responses based on user queries.
+
+#### Display Metrics Function (display_metrics)
+Renders key metrics related to the GitHub repository in a responsive card layout.
+
+#### Display Visualizations Functions:
+- **Commit Visualizations (display_commit_visualizations)**: Generates and displays visualizations specifically for commit data.
+- **Pull Request Visualizations (display_pull_request_visualizations)**: Similar to commit visualizations but tailored for pull requests.
+
+#### Developer Activity Page Function (developer_page)
+Displays metrics and visualizations related to developer activity within the repository.
+
+#### Graph State and Nodes Functions
+Defines the structure of the graph state and includes logic for classifying user input as requiring either a graph or text response.
+Helper Functions: - **classify(user_query: str)**: Classifies user input to determine if it requires a graph or text response.
+  
 ### `github_collection.py`
 This script collects data from GitHub repositories. It extracts commits, pull requests, and issues, calculates relevant metrics, and saves the data into CSV files. The main functions include:
 - `extract_repo_info(url)`: Extracts the owner and repository name from the GitHub URL.
