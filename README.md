@@ -8,8 +8,8 @@ A comprehensive GitHub repository analysis tool developed for the Thuli Studios 
 
 ## 🔗 Quick Links
 
-- **Deployment**: [View the live application](https://thuli-studios-hackthon.streamlit.app/)
-- **Design Document**: [Read the project design](https://docs.google.com/document/d/18JpnlCxH-T5IgXeH-wAuBwgvLjWOKD9Tr2lm9hEV6Kw/edit?usp=sharing)
+- **Deployment**: [View the live application](https://thulihackthon.streamlit.app/)
+- **Design Document**: [Read the project design](https://docs.google.com/document/d/1lLEgeF6PPRpxgYrpITflf06feH8acqzpQ0e6THc_qMw/edit)
 
 ## 🚀 Features
 
