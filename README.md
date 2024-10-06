@@ -1,143 +1,144 @@
+# Thuli Studios Hackathon Project
 
-## Installation
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+
+A comprehensive GitHub repository analysis tool developed for the Thuli Studios Hackathon. This application provides insightful visualizations and metrics for repository data, including commits, pull requests, and developer activities.
+
+## 🚀 Features
+
+- GitHub repository data collection
+- Commit and pull request analysis
+- Developer activity metrics
+- Natural Language Processing (NLP) for commit message analysis
+- Interactive visualizations using Plotly
+- Streamlit-based user interface
+
+## 🛠 Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/shriram-17/Thuli_Studios_Hackthon.git
-    cd Thuli_Studios_Hackthon
-    ```
+   ```bash
+   git clone https://github.com/shriram-17/Thuli_Studios_Hackthon.git
+   cd Thuli_Studios_Hackthon
+   ```
 
-2. Install the required packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. Install required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. Create a `.env` file in the root directory and add your GitHub token and Qdrant API key:
-    ```plaintext
-    GITHUB_TOKEN=your_github_token
-    qdrant_api=your_qdrant_api_key
-    ```
+3. Create a `.env` file in the root directory:
+   ```plaintext
+   GITHUB_TOKEN=your_github_token
+   qdrant_api=your_qdrant_api_key
+   ```
 
-## Usage
+## 🖥 Usage
 
-1. Run the `github_collection.py` script to collect repository data:
-    ```bash
-    python github_collection.py
-    ```
+1. Collect repository data:
+   ```bash
+   python github_collection.py
+   ```
 
-2. Utilize the `text_agent.py` and `graph_agent.py` to analyze and visualize data.
+2. Launch the application:
+   ```bash
+   streamlit run app.py
+   ```
 
-3. Use the `qdrant.py` file to handle queries related to graph types and their syntax.
-
-4. Launch the application using:
-    ```bash
-    streamlit run app.py
-    ```
-
-## Files Description
+## 📁 File Structure and Detailed Descriptions
 
 ### `app.py`
-This file serves as the main application interface with several key functions:
+The main application interface built with Streamlit. Key components include:
 
-#### Main Function (main)
-Controls the main workflow of the application, including sidebar navigation and page rendering.
-
-#### Home Page Function (home_page)
-Allows users to enter a GitHub repository URL to fetch data. It parses the repository URL and collects relevant metrics to display.
-
-#### Commits Page Function (commits_page)
-Displays commit data along with visualizations. Provides users with an option to export this commit data to a CSV file for offline use.
-
-#### Pull Requests Page Function (pull_requests_page)
-Displays pull request data along with visualizations. Offers an option to export pull request data to a CSV file.
-
-#### NLP Module Page Function (nlp_module_page)
-Allows users to input queries about commit data. Utilizes both graph and text agents to generate responses based on user queries.
-
-#### Display Metrics Function (display_metrics)
-Renders key metrics related to the GitHub repository in a responsive card layout.
-
-#### Display Visualizations Functions:
-- **Commit Visualizations (display_commit_visualizations)**: Generates and displays visualizations specifically for commit data.
-- **Pull Request Visualizations (display_pull_request_visualizations)**: Similar to commit visualizations but tailored for pull requests.
-
-#### Developer Activity Page Function (developer_page)
-Displays metrics and visualizations related to developer activity within the repository.
-
-#### Graph State and Nodes Functions
-Defines the structure of the graph state and includes logic for classifying user input as requiring either a graph or text response.
-
-#### Helper Functions:
-- **classify(user_query: str)**: Classifies user input to determine if it requires a graph or text response.
+- `main()`: Controls the main workflow, including sidebar navigation and page rendering.
+- `home_page()`: Allows users to enter a GitHub repository URL and fetches data.
+- `commits_page()`: Displays commit data and visualizations with CSV export option.
+- `pull_requests_page()`: Shows pull request data and visualizations with CSV export option.
+- `nlp_module_page()`: Processes user queries about commit data using graph and text agents.
+- `display_metrics()`: Renders key repository metrics in a card layout.
+- `display_commit_visualizations()` and `display_pull_request_visualizations()`: Generate specific visualizations for commits and pull requests.
+- `developer_page()`: Displays metrics and visualizations for developer activity.
+- `classify(user_query: str)`: Determines if a user query requires a graph or text response.
 
 ### `github_collection.py`
-This script collects data from GitHub repositories. It extracts commits, pull requests, and issues, calculates relevant metrics, and saves the data into CSV files. The main functions include:
-- **extract_repo_info(url)**: Extracts the owner and repository name from the GitHub URL.
-- **process_commit(commit)**: Processes individual commit data.
-- **process_pull_request(pr)**: Processes individual pull request data.
-- **process_issue(issue)**: Processes individual issue data.
-- **collect_repo_data(owner, repo_name)**: Collects data from the specified GitHub repository.
-- **calculate_metrics(commits_df, prs_df, issues_df)**: Calculates metrics from the collected data.
+Collects data from GitHub repositories, including commits, pull requests, and issues. Main functions:
+
+- `extract_repo_info(url)`: Parses GitHub URLs to extract owner and repository name.
+- `process_commit(commit)`, `process_pull_request(pr)`, `process_issue(issue)`: Process individual data points.
+- `collect_repo_data(owner, repo_name)`: Collects comprehensive data from a specified repository.
+- `calculate_metrics(commits_df, prs_df, issues_df)`: Computes various metrics from the collected data.
 
 ### `text_agent.py`
-This agent is responsible for processing text-based queries and extracting relevant information from the collected data. Key functionalities include:
+Processes text-based queries and extracts relevant information from collected data. Key functions:
 
-- **load_data(file_path: str) -> pd.DataFrame**: Load commit data from a CSV file.
-  - **Args**: 
-      - `file_path (str)`: Path to the CSV file.
-  - **Returns**: 
-      - `pd.DataFrame`: Loaded commit data with an additional message_length column.
-
-- **extract_entities(text: str) -> list**: Extract entities from commit messages using spaCy.
-  - **Args**: 
-      - `text (str)`: Commit message text.
-  - **Returns**: 
-      - `list`: List of extracted entities.
-
-- **categorize_commit(message: str) -> str**: Categorize commit messages into predefined categories.
-  - **Args**: 
-      - `message (str)`: Commit message text.
-  - **Returns**: 
-      - `str`: Category of the commit.
-
-- **preprocess_commits(df: pd.DataFrame) -> tuple**: Preprocess commit data by extracting entities and categorizing commits.
-  - **Args**: 
-      - `df (pd.DataFrame)`: Raw commit data.
-  - **Returns**: 
-      - `tuple`: Preprocessed DataFrame and Counter object of entity frequencies.
-
-- **summarize_data(df: pd.DataFrame, top_n_authors: int = 5, top_n_entities: int = 10) -> tuple**: Summarize commit data by selecting top authors and top entities.
-  - **Args**:
-      - `df (pd.DataFrame)`: Preprocessed commit data.
-      - `top_n_authors (int)`: Number of top authors to include.
-      - `top_n_entities (int)`: Number of top entities to include.
-  - **Returns**:
-      - `tuple`: Summarized DataFrame and limited entity counts.
-
-- **generate_response(user_query: str, grouped_commits: pd.DataFrame, top_entities: dict) -> str**: Generate a response to the user's query using Groq API.
-  - **Args**:
-      - `user_query (str)`: The user's question or request.
-      - `grouped_commits (pd.DataFrame)`: Summarized commit data grouped by author.
-      - `top_entities (dict)`: Top entities and their frequencies.
-  - **Returns**:
-      - `str`: Response generated by the Groq API.
+- `load_data(file_path: str)`: Loads commit data from CSV and adds a message_length column.
+- `extract_entities(text: str)`: Uses spaCy to extract named entities from commit messages.
+- `categorize_commit(message: str)`: Categorizes commits into predefined types.
+- `preprocess_commits(df: pd.DataFrame)`: Extracts entities and categorizes commits in bulk.
+- `summarize_data(df: pd.DataFrame, top_n_authors: int, top_n_entities: int)`: Summarizes commit data by top authors and entities.
+- `generate_response(user_query: str, grouped_commits: pd.DataFrame, top_entities: dict)`: Generates responses to user queries using the Groq API.
 
 ### `graph_agent.py`
-This agent generates visualizations based on provided data and user queries. It integrates with Plotly for creating dynamic visualizations. Key functions include:
-- **load_data()**: Loads and preprocesses commit data from a CSV file, converting date strings into datetime objects and calculating message lengths.
-- **extract_entities(text)**: Uses spaCy to extract named entities from a given text, focusing on organizations, products, geographical entities, and locations.
-- **preprocess_commits(df)**: Processes commit messages to extract key information using Named Entity Recognition (NER). It counts occurrences of each entity and extracts file changes if available.
-- **query_groq(user_query: str, data: pd.DataFrame, entity_counts: Counter, graph_type: str, graph_syntax: str) -> str**: Queries the Groq API with a user query and provided commit data. It prepares a prompt with context about the commit data and requested visualization type, sends it to Groq API, cleans up the generated code, executes it in a local context, and returns any generated images.
-- **image_groq(user_query)**: Main function that orchestrates loading commit data, preprocessing it, querying for graph types using Qdrant, and generating visualizations based on user queries.
+Generates visualizations based on data and user queries using Plotly. Main functions:
+
+- `load_data()`: Loads and preprocesses commit data from CSV.
+- `extract_entities(text)`: Uses spaCy for Named Entity Recognition on commit messages.
+- `preprocess_commits(df)`: Processes commit messages to extract key information and count entity occurrences.
+- `query_groq(user_query: str, data: pd.DataFrame, entity_counts: Counter, graph_type: str, graph_syntax: str)`: Queries Groq API with user input and commit data to generate visualization code.
+- `image_groq(user_query)`: Orchestrates the entire process of loading data, preprocessing, querying for graph types, and generating visualizations.
 
 ### `qdrant.py`
-This script integrates with Qdrant to manage graph types and their corresponding syntax for visualizations. Key functionalities include:
-- **load_environment()**: Loads environment variables from a `.env` file.
-- **initialize_qdrant_client()**: Initializes the Qdrant client for database interaction.
-- **initialize_sentence_transformer()**: Initializes the SentenceTransformer model for embedding sentences.
-- **get_plotly_graph_syntax()**: Provides syntax templates for various Plotly graph types.
-- **query_graph_type(client, model, collection_name, user_description)**: Queries Qdrant to find the best matching graph type based on the user's description.
+Manages graph types and their syntax for visualizations using Qdrant. Key functions:
 
-## License
+- `load_environment()`: Loads environment variables from the .env file.
+- `initialize_qdrant_client()`: Sets up the Qdrant client for database interactions.
+- `initialize_sentence_transformer()`: Initializes the SentenceTransformer model for text embedding.
+- `get_plotly_graph_syntax()`: Provides syntax templates for various Plotly graph types.
+- `query_graph_type(client, model, collection_name, user_description)`: Queries Qdrant to find the best matching graph type based on user descriptions.
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+## 📊 Visualizations
+
+### Commit Visualizations
+- **Commit Timeline**: Tracks commit frequency over time.
+- **Commit Frequency**: Shows commit patterns by hour, week, and month.
+- **Commit Message Word Cloud**: Visualizes common terms in commit messages.
+
+### Pull Request Visualizations
+- **Additions and Deletions**: Bar plot comparing code added vs. removed.
+- **Review Cycle Time**: Scatter plot showing PR review durations.
+- **PR State Distribution**: Pie chart of open, closed, and merged PRs.
+- **PR Complexity**: Bubble chart representing PR size and complexity.
+
+## 🧠 NLP Module
+
+The NLP module allows users to input natural language queries about commit data. It utilizes both graph and text agents to generate insightful responses and visualizations based on the query content.
+
+## 👨‍💻 Developer Activity
+
+Tracks and visualizes various aspects of developer contributions:
+- Commit frequency per developer
+- Lines of code added/removed
+- Pull request involvement
+- Issue resolution rates
+
+## 📈 Metrics
+
+Displays key repository metrics in a responsive card layout, including:
+- Total commits and pull requests
+- Average PR review time
+- Most active contributors
+- Repository growth rate
+- Code churn
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/shriram-17/Thuli_Studios_Hackthon/issues).
+
+## 📝 License
+
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+
+---
+
+Developed with ❤️ for the Thuli Studios Hackathon
